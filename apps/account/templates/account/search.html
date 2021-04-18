@@ -1,0 +1,23 @@
+{% extends 'account/profile.html' %}
+{% block header %}{{ username }}{% endblock %}
+{% block content %}
+    <div class="main-detail">
+    <form  autocomplete="on" action="" style="margin-top: 10px">
+        <label>
+            <input  type="text" list="user_list" placeholder="Text to search" name="search_text">
+        </label>
+        <datalist id="user_list">
+            {% for result in results %}
+                <option value="{{ result.email }}">
+            {% endfor %}
+        </datalist>
+        <button type="submit">Search</button>
+    </form>
+    <p >search results :</p>
+        <ul>
+            {% for p in users %}
+                <p><a style="font-size: 20px" href={% url 'user_detail' p.id %}>{{ p.email }}</a></p>
+            {% endfor %}
+        </ul>
+{% endblock %}
+</div>

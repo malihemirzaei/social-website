@@ -1,0 +1,47 @@
+{% load static %}
+{% load user_tags %}
+{% load post_custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'user/pro_style.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}Profile{% endblock %}</title>
+</head>
+<body>
+<header>
+    <a href="{% url 'profile' %}"><img src="{% static 'images/logo.jpeg' %}" class="logo" alt="logo"></a>
+
+
+    <div class="header-svg">
+        {% if not request.user.pr_image %}
+            <a href="{% url 'edit' request.user.id %}"><span
+                    class="svg">  {% include 'account/img/user (2).svg' %}</span></a>
+        {% else %}
+            <a class="test" href="{% url 'profile' %}">
+                <img style="position: absolute;right: 110px;margin-top: 4px;border-radius: 50%"
+                     src="{{ request.user.pr_image.url }}"
+                     width="40px"
+                     height="40px" alt="profile">
+            </a>
+        {% endif %}
+
+        <a class="test" href="{% url 'Request_List' %}"><span
+                class="svg">  {% include 'account/img/heart.svg' %}</span></a>
+        <a class="test" href="{% url 'user-profile' %}"><span
+                class="svg">  {% include 'account/img/home.svg' %}</span></a>
+        <a class="test" href="{% url 'search' %}"><span
+                class="svg">  {% include 'account/img/search (1).svg' %}</span></a>
+        <a class="test" href="{% url 'add_new_post' %}"><span
+                class="svg">  {% include 'account/img/plus.svg' %}</span></a>
+        <a class="test" href="{% url 'logout' %}"><span
+                class="svg">  {% include 'account/img/log-out.svg' %}</span></a>
+
+    </div>
+
+</header>
+<main>
+        <div>{% show_posts user %}</div>
+</main>
+</body>
+</html>

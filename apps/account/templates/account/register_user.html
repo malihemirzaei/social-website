@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'user/style.css' %}">
+    <title> User sign in </title>
+</head>
+<body>
+<div style=" " ><br>
+    <form action="" method="post" class="signup_form" style="margin-left: 400px;padding-top: 0" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            <tr>{{ form.as_table }}</tr>
+        </table>
+        <br>
+        <div style="margin-left:100px;margin-top: 20px">
+            <input class="sign_input" style="background-color: #5b3c5f;margin-left: 100px" type="submit" VALUE="create account">
+        </div>
+    </form>
+</div>
+</body>
+</html>

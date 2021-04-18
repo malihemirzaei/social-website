@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: scroll;
+}
+
+header {
+    background-color: #ffff;
+    border-bottom: 1px solid #CCD1D1;
+    color: cornsilk;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    margin-left: 130px;
+    margin-top: 5px;
+}
+
+.svg {
+    width: 20px;
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.like {
+    width: 30px;
+    position: absolute;
+    left: 15px;
+    top: 550px;
+}
+
+.header-svg {
+    display: inline;
+    float: right;
+    margin-right: 150px;
+}
+
+main {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 80px;
+    /*min-height: 500px;*/
+    min-height: 100%;
+}
+
+.main {
+    margin-top: 20px;
+    border-bottom: 1px solid #CCD1D1;
+    height: 200px;
+    width: 1000px;
+
+}
+
+.main-detail {
+    color: #642f5c;
+    position: absolute;
+    top: 300px;
+
+
+}
+
+li {
+    /*font-size: 30px;*/
+    /*font-weight: bold;*/
+    /*float: right;*/
+    /*text-decoration: none;*/
+    list-style: none;
+
+}
+
+.otp-form {
+    background-color: #642f5c;
+    width: 700px;
+    height: 700px;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.tasks ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.detail {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail tr, th, td {
+    border: 1px solid black;
+}
+
+
+.test {
+    margin-right: 10px;
+    margin-top: 10px;
+
+}

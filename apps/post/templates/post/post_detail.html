@@ -1,0 +1,41 @@
+{% extends 'account/profile.html' %}
+
+{% load static %}
+{% load post_custom_tags %}
+{% block title %}Post Detail{% endblock %}
+{% block content %}
+    <div class="main-detail">
+
+        <p>{{ post.account_id }}</p>
+        <img src="{{ post.image.url }}" width="550px" height="500px">
+        {% if user == post.account_id %}
+            <ul style="margin-top: 0">
+                <li style="float: right">
+                    <button id="demo"><a href="/post/edit_post/{{ post.pk }}">Edit Post</a>
+                    </button>
+                    <button id="demo"><a href="/post/post_delete/{{ post.pk }}">Delete</a>
+                    </button>
+                </li>
+            </ul>
+            <div> <h3 style="position: absolute;left: 5px;top: 535px">{% l_cnt post.pk %}</h3>  <a href="{% url 'like' post.pk %}"> <span
+                    class="like"> {% include 'account/img/heart (1).svg' %}</span></a>
+                </button><h3 style="position: absolute;left: 60px;top: 535px">{{ post.age }}</h3></div>
+        {% else %}
+
+            <h>{% l_cnt post.pk %}</h> <a href="{% url 'like' post.pk %}"><span
+                style="position: absolute;left: 15px;top: 555px;width: 30px"
+                id="demo">  {% include 'account/img/heart (1).svg' %}</span></a>
+            </button><h3 style="float: right;position: absolute;top: 540px;left: 70px">{{ post.age }}</h3>
+        {% endif %}
+        <br>
+        <div style="width: 500px;margin: 20px">{{ post.content }}</div>
+    </div>
+    <div style="float: right;position: absolute;top: 350px;left: 860px">
+        <form method="post" action="{% url 'comment' post.pk %}">
+            {% csrf_token %}
+            <input placeholder=" comment" type="text" name="note">
+            <button type="submit" value="comment_btn" style="float: right">comment</button>
+        </form>
+    </div>
+    <div style="position: absolute;top: 400px;left: 850px">{% show_comments post.pk user %}</div>
+{% endblock %}

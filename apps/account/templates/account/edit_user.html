@@ -1,0 +1,11 @@
+{% extends 'account/profile.html' %}
+{% block content %}
+    <div class="main-detail" style="margin-top: 20px">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input style="margin-left: 60px;margin-top: 20px;width: 150px" type="submit" value="Save">
+    </form>
+
+{% endblock %}
+</div>

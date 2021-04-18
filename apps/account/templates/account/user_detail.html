@@ -1,0 +1,15 @@
+{% extends 'account/profile.html' %}
+{% load post_custom_tags %}
+{% block content %}
+<div class="main-detail">
+    <h2>{{ user }}</h2>
+
+    {% if use not in request.user.friends.all and user != request.user%}
+        <button style="float: left"><a href="/send_friend_request/{{ user.id }}"> send request</a></button>
+        <br>{% endif %}
+    <br>
+    <div>{% user_post user %}</div>
+
+{{ request_from_user }}
+{% endblock %}
+</div>

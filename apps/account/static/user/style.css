@@ -1,0 +1,103 @@
+.login {
+    width: 350px;
+    height: 500px;
+    border: black 1px solid;
+    position: absolute;
+    left: 500px;
+    bottom: 70px;
+
+}
+
+.errornote{
+    font-size: 20px;
+}
+
+.text {
+    margin-top: 30px;
+    font-size: 50px;
+    margin-left: 50px;
+    color: mediumorchid;
+
+
+}
+
+.login_form {
+    padding-top: 20px;
+    padding-left: 50px;
+    margin: 5px;
+
+}
+
+.log_input {
+    margin-bottom: 10px;
+    width: 250px;
+    height: 35px;
+    background-color: #F3D9F5;
+    border: none;
+}
+
+.log_in {
+    background-color: #cba1cf;
+    border: none;
+    margin-left: 2px;
+    border-radius: 5px;
+    width: 250px;
+    height: 35px;
+}
+
+.forgot_pass {
+    margin-left: 95px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.message {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 60px;
+    color: crimson;
+}
+
+.sign_up {
+    width: 200px;
+    height: 100px;
+    margin-left: 80px;
+    background-color: #8d5b99;
+    margin-top: 40px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+
+.sign_up a {
+    margin-left: 65px;
+    text-decoration: none;
+}
+
+.signup {
+    width: 600px;
+    height: 600px;
+    border: black 1px solid;
+    position: absolute;
+    left: 400px;
+
+}
+
+.signup_form {
+    padding: 35px;
+    margin: 20px;
+    color: #D113E4;
+
+}
+
+.sign_input {
+    margin-bottom: 10px;
+    width: 100px;
+    height: 35px;
+    background-color: #f3d9f5;
+    border: none;
+}
+
+
+/*__________profile__________*/

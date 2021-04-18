@@ -1,0 +1,14 @@
+{% if comments %}
+    <ul>
+        {% for comment in comments %}
+            <li style="list-style: none ;font-size: 15px;border: 1px solid #CCD1D1;"><p>{{ comment }} </p>
+                by {{ comment.user_id }}
+                {% if user == post.account_id or comment.user_id == user %}
+                    <button id="demo"><a href="/post/comment_delete/{{ comment.pk }}">Delete</a>
+                    </button>
+                {% endif %}</li><br>
+        {% endfor %}
+        {% else %}
+        <span>No Comments!!</span>
+    </ul>
+{% endif %}

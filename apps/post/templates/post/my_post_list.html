@@ -1,0 +1,21 @@
+{% extends 'account/profile.html' %}
+{% load static %}
+{% block title %}My Posts{% endblock %}
+{% block content %}
+    <div class="main-detail">
+    {% if my_post_list %}
+        <div>
+            <ul>
+                {% for post in my_post_list %}
+                    <div style="float: left;margin-right: 5px;margin-top: 10px">
+                        <li><a href="/post/{{ post.id }}"><img src="{{ post.image.url }}" width="300px" height="280px" alt="img"></a>
+                        </li>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <h1>No Post!</h1>
+    {% endif %}
+{% endblock %}
+</div>

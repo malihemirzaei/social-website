@@ -1,0 +1,23 @@
+{% load static %}
+
+<div style="    background-color: #9b8297;
+    width: 200px;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 100px;
+    padding: 40px;
+border-radius:40px">
+
+    <h3 style="margin-bottom: 40px">Please enter the code sent to you via SMS</h3>
+    <form action="." method="post" >
+        {% csrf_token %}
+        <label>
+            <input type="text" value="{{ mobile }}" readonly disabled class="fadeIn second" name="mobile" >
+        </label><br>
+        <label>
+            <input type="text" required class="fadeIn second" name="otp" placeholder="Enter OTP"
+                   style="margin-top: 10px">
+        </label><br>
+        <input type="submit" class="fadeIn fourth" value="Check OTP" style="margin-top: 10px">
+    </form>
+</div>

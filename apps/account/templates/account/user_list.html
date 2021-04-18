@@ -1,0 +1,14 @@
+
+{% extends 'account/profile.html' %}
+{% block title %}follower{% endblock %}
+{% block header %}{{ username }}{% endblock %}
+{% block content %}
+<div class="main-detail">
+<h2>users</h2>
+<ul>
+    {% for p in user_list %}
+        <li><a href={% url 'user_detail' p.id %}>{{ p.email }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+</div>

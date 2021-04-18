@@ -1,0 +1,12 @@
+{% if posts %}
+    {% for post in posts %}
+        <div style="float: left;margin-right: 5px;margin-top: 10px">
+
+            <li><a href="/post/{{ post.id }}"><img src="{{ post.image.url }}" width="200px" height="180px" alt="img"></a>
+            </li>
+        </div>
+
+    {% endfor %}
+{% else %}
+    <span>No Posts!</span>
+{% endif %}

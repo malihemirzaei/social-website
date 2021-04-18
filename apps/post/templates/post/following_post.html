@@ -1,0 +1,21 @@
+{% load static %}
+<div style="position: absolute;right: 300px;">
+    {% if posts %}
+        <ul>
+ 
+                {% for p in posts %}
+
+                    <li style="margin: 10px">
+                        <a href={% url 'post_detail' p.id %}>
+                            <h>{{ p.account_id }}</h>
+                            <br> <img style="width: 400px;height: 400px" src="{{ p.image.url }}" alt="post"></a></li>
+ 
+                {% endfor %}
+
+
+        </ul>
+    {% else %}
+        <h1>No posts!</h1>
+    {% endif %}
+
+</div>
